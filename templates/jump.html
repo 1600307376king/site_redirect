@@ -6,9 +6,10 @@
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <p>{{ url }}</p>
+    <div id="jumpUrl" style="opacity: 0">{{ url }}</div>
+    <div style="font-size: 24px">Loading...</div>
 </body>
 <script type="text/javascript">
-    window.location.href = {{ url }};
+    window.location.href = document.getElementById("jumpUrl").innerText;
 </script>
 </html>
